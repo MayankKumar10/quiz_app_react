@@ -1,11 +1,9 @@
 import "./rules.css";
-// import rulesIcon from "assets/hero/rules.png";
-//import { FingerRight } from "assets/icons";
 import {Link, useParams} from "react-router-dom";
 import {rules} from "data/rules";
 
 export function Rules(): JSX.Element {
-  const {quizId} = useParams<{quizId: string}>();
+  const {quesId} = useParams<{quesId: string}>();
   return (
     <>
       <div className="InstallationDomMainContainer TypoHtag card-container-bg flex-space-evenly">
@@ -15,9 +13,6 @@ export function Rules(): JSX.Element {
             <ul className="list-main-container padding-normal flex-column-start">
               {rules.map((rule, id) => (
                 <li className="list-container" key={id}>
-                  {/* <span>
-                <FingerRight className="icon-arrow" />
-              </span> */}
                   {rule}
                 </li>
               ))}
@@ -26,42 +21,12 @@ export function Rules(): JSX.Element {
 
           <Link
             className="padding-small-card shade flex-column-al-center translateOne margin-normal-top back-btn imgTransition col-12"
-            to={`/quiz/${quizId}/${0}`}
+            to={`/quiz/${quesId}/${0}`}
           >
             Proceed to Quiz
           </Link>
-
-          <Link
-            to={`/`}
-            className="padding-small-card shade flex-column-al-center translateOne margin-normal-top back-btn imgTransition col-12"
-          >
-            Go Back
-          </Link>
         </div>
       </div>
-
-      <section>
-        <div className="card">
-          {/* <img src={rulesIcon} alt="rules__page--img" /> */}
-          <h6>Rules to be followed</h6>
-          <ul>
-            {rules.map((rule, id) => (
-              <li key={id}>
-                {/* <span>
-                <FingerRight className="icon-arrow" />
-              </span> */}
-                {rule}
-              </li>
-            ))}
-          </ul>
-          <Link
-            className="btn btn-primary"
-            to={`/quiz/${quizId}/${0}`}
-          >
-            Start Quiz
-          </Link>
-        </div>
-      </section>
     </>
   );
 }

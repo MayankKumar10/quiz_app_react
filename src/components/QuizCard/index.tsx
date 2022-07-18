@@ -1,17 +1,15 @@
-import "./quizCard.css";
-import React from "react";
-// import { PlayIcon } from "assets/icons";
+import "../../styles/root.css";
 import {Link} from "react-router-dom";
 
 type QuizCardProps = {
   key: string;
   quiz: {
     _id: string;
-    difficulty: string;
     name: string;
-    // quote: string;
-    genres: string[];
-    poster: string;
+    categories: string[];
+    quotes: string;
+    quizImg: string;
+    levels: string;
   };
 };
 
@@ -19,36 +17,36 @@ export function QuizCard({
   quiz,
 }: QuizCardProps): JSX.Element {
   const {
-    _id: quizId,
-    difficulty,
+    _id: quesId,
     name,
-    //quote,
-    genres,
-    poster,
+    categories,
+    quotes,
+    quizImg,
+    levels,
   } = quiz;
   return (
-    <div className="padding-small-card shade classA translateOne">
-      <Link to={`/rules/${quizId}`}>
+    <div className="padding-small-card shade flex-cl-center translateOne m-l-2">
+      <Link to={`/rules/${quesId}`}>
         <div className="quiz-container padding-small-card shade imgTransition">
           <img
             className="quiz-img"
-            src={poster}
+            src={quizImg}
             alt="quiz1-Img"
           />
         </div>
         <div className="padding-normal card-selector-text">
           <div className="category-body">
-            <span className="level">{difficulty}</span>
+            <span className="level">{levels}</span>
             <h5 className="name">{name}</h5>
-            {/* <p>{quote}</p> */}
+            <p>{quotes}</p>
             <div>
-              {genres.map(
+              {categories.map(
                 (
-                  genre: string,
+                  category: string,
                   index: number
                 ): JSX.Element => (
-                  <span className="genre" key={index}>
-                    {genre}
+                  <span className="category" key={index}>
+                    {category}
                   </span>
                 )
               )}

@@ -2,7 +2,7 @@ import "./result.css";
 import {useQuizData} from "context";
 import {Options} from "components";
 import {useNavigate} from "react-router-dom";
-import {ResultTrophy, Trophy1} from "../../assets";
+import {ResultTrophy, Oops} from "../../assets";
 
 export function Result(): JSX.Element {
   const {
@@ -22,12 +22,12 @@ export function Result(): JSX.Element {
   return (
     <div>
       <div className="InstallationDomMainContainer TypoHtag card-container-bg flex-space-evenly">
-        <div className="padding-small-card shade classA translateOne">
+        <div className="padding-small-card shade flex-cl-center translateOne">
           <h3>Result</h3>
-          <div className="padding-small-card shade flex-column-al-center translateOne margin-normal-bottom back-btn">
+          <div className="padding-small-card shade flex-column-al-center translateOne margin-normal-bottom back-btn col-12">
             score: {score}
           </div>
-          <div className="quiz-container flex-row-center padding-small-card shade">
+          <div className="quiz-container flex-row-center padding-small-card shade col-12">
             {score >= 60 ? (
               <img
                 src={ResultTrophy}
@@ -37,7 +37,7 @@ export function Result(): JSX.Element {
               />
             ) : (
               <img
-                src={Trophy1}
+                src={Oops}
                 alt="loss"
                 width="200"
                 height="200"
@@ -48,14 +48,17 @@ export function Result(): JSX.Element {
             <div className="option-container">
               {activeQuizQuestions &&
                 activeQuizQuestions.map((q) => (
-                  <div key={q.id} className="m-b-2">
+                  <div
+                    key={q.id}
+                    className="margin-bottom-2 col-8"
+                  >
                     <p className="question">{q.question}</p>
                     {q.options.map((option, id) => (
                       <Options
                         option={option}
                         id={id.toString()}
                         answer={q.answer}
-                        isSelected={q.isSelected}
+                        selection={q.selection}
                         handleOptionChange={() => {}}
                         key={id}
                         type="result"

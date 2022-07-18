@@ -1,5 +1,6 @@
-.m-b-2 {
+.margin-bottom-2 {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .card .info {
@@ -9,8 +10,15 @@
 }
 
 .highlight-text {
-  color: var(--COLOR-HIGHLIGHT);
+  color: var(--color-primary);
   font-weight: 600;
+}
+
+.quiz-flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .card .question {

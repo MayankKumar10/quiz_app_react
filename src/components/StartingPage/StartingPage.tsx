@@ -5,13 +5,13 @@ import {HomeImage, moviesCollage} from "../../assets";
 
 export const StartingPage = (): JSX.Element => {
   return (
-    <div className="padding-small-card shade translateOne classA">
+    <div className="padding-small-card shade translateOne flex-cl-center">
       <img
         className="quiz-index-img"
         src={HomeImage}
         alt="quiz-img"
       />
-      <div className="padding-small-card shade classA translateOne container-absolute quiz-container-bg col-6">
+      <div className="padding-small-card shade flex-cl-center translateOne container-absolute quiz-container-bg col-6">
         <div className="quiz-container padding-small-card shade imgTransition col-12">
           <img
             className="quiz-img"
@@ -25,8 +25,8 @@ export const StartingPage = (): JSX.Element => {
             If you are Movies and series buff Play this Quiz
           </p>
         </div>
-        <Link to="category">
-          <div className="quiz-container padding-small-card shade imgTransition flex-row-center col-12">
+        <Link to="category ">
+          <div className="quiz-container padding-small-card shade imgTransition flex-row-center">
             Start Quiz
           </div>
         </Link>

@@ -1,11 +1,8 @@
 import React from "react";
-import {Link, useParams} from "react-router-dom";
-import {SuitsQuiz, SteveJobsQuiz} from "../../assets";
 import {useQuizData} from "../../context";
 import {QuizCard} from "../QuizCard";
 
 export const SelectingCategories = (): JSX.Element => {
-  const {categoriyId} = useParams();
   const {quizData} = useQuizData();
 
   return (

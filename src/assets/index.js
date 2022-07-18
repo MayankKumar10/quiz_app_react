@@ -1,0 +1,9 @@
+export {default as HomeImage} from "./HomeImage.jpeg";
+export {default as Movies} from "./Movies.jpg";
+export {default as moviesCollage} from "./moviesCollage.jpeg";
+export {default as SuitsQuiz} from "./SuitsQuiz.jpg";
+export {default as SteveJobsQuiz} from "./SteveJobsQuiz.jpg";
+export {default as Trophy1} from "./trophy1.jpg";
+export {default as ResultTrophy} from "./ResultTrophy.jpg";
+export {default as TV_Shows} from "./TV_Shows.jpg";
+export {default as error404} from "./page_not_found_404.svg";

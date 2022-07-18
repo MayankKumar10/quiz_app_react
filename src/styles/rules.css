@@ -1,0 +1,35 @@
+.rules-main-container {
+	height: 30rem;
+}
+
+.rules-container {
+	width: 25rem;
+}
+
+.flex-column-al-center {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+}
+
+.column-al-sp-around {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.list-container {
+	padding-top: 0.5rem;
+	font-size: 1.2rem;
+}
+
+.quiz-result-img {
+	width: 30rem;
+	height: 12rem;
+	color: var(--color-text-1);
+}

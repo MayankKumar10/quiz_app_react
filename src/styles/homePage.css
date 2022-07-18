@@ -1,7 +1,8 @@
-.classA {
+.flex-cl-center {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .quiz-container-bg {
@@ -35,6 +36,10 @@
 .padding-small-card {
   padding: 0.5rem 0.8rem 0.8rem 0.8rem;
   border-radius: 0.5rem;
+}
+
+.m-l-2 {
+  margin: 0px 2rem;
 }
 
 .quiz-index-img {

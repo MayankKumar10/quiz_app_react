@@ -3,8 +3,8 @@
   flex-grow: 1;
   border-radius: 1rem;
   overflow: hidden;
-  color: var(--COLOR-DARK);
-  background-color: var(--COLOR-LIGHT);
+  color: var(--color-dark);
+  background-color: var(--color-light);
 }
 
 .category-card img {
@@ -27,8 +27,8 @@
   text-transform: uppercase;
   font-size: 0.6875rem;
   font-weight: 700;
-  color: var(--COLOR-LIGHT);
-  background-color: var(--COLOR-HIGHLIGHT);
+  color: var(--color-light);
+  background-color: var(--color-primary);
   border-radius: 4px;
 }
 
@@ -36,15 +36,15 @@
   margin: 0.5rem 0;
 }
 
-.category-body .genre {
+.category-body .category {
   margin-right: 0.2rem;
   text-transform: capitalize;
   padding: 2px 4px;
   border-radius: 5px;
   font-size: 0.9rem;
   font-weight: 300;
-  color: var(--COLOR-LIGHT);
-  background-color: var(--COLOR-WARNING);
+  color: var(--color-light);
+  background-color: var(--color-primary);
 }
 
 .category-body .btn-floating {

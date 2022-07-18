@@ -6,8 +6,8 @@ import {Options} from "components";
 import "./quiz.css";
 
 export function Quiz(): JSX.Element {
-  const {quizId, quesNo} = useParams<{
-    quizId: string;
+  const {quesId, quesNo} = useParams<{
+    quesId: string;
     quesNo: string;
   }>();
   const navigate = useNavigate();
@@ -24,53 +24,53 @@ export function Quiz(): JSX.Element {
     question: string;
     options: string[];
     answer: string;
-    isSelected: string;
+    selection: string;
   }>(undefined);
 
   useEffect(() => {
     (async () => {
       try {
         const response = await axios.get(
-          `/api/quizzes/${quizId}`
+          `/api/quizzes/${quesId}`
         );
         setActiveQuiz(response.data.quiz);
         setActiveQuizQuestions(
-          response.data.quiz.questions.map((i) => ({
+          response.data.quiz.questions.map((i: any) => ({
             ...i,
-            isSelected: "",
+            selection: "",
           }))
         );
       } catch (error) {
         console.log(error);
       }
     })();
-  }, [quizId, setActiveQuiz, setActiveQuizQuestions]);
+  }, [quesId, setActiveQuiz, setActiveQuizQuestions]);
 
   useEffect(() => {
     activeQuizQuestions &&
       setQues(activeQuizQuestions[quesNo]);
   }, [quesNo, setQues, activeQuizQuestions]);
 
-  const handleOptionChange = (option) => {
+  const handleOptionChange = (option: any) => {
     const data = activeQuizQuestions;
 
     setActiveQuizQuestions(
       data.map((q) =>
         q.id === ques.id
-          ? {...q, isSelected: option}
+          ? {...q, selection: option}
           : {...q}
       )
     );
   };
 
   const gotoNextQuestion = (): void => {
-    if (ques.isSelected === ques.answer) {
+    if (ques.selection === ques.answer) {
       setScore(score + 20);
     }
     if (Number(quesNo) >= activeQuizQuestions.length - 1) {
       navigate("/result");
     } else {
-      navigate(`/quiz/${quizId}/${Number(quesNo) + 1}`);
+      navigate(`/quiz/${quesId}/${Number(quesNo) + 1}`);
     }
   };
 
@@ -79,55 +79,56 @@ export function Quiz(): JSX.Element {
       <div className="InstallationDomMainContainer TypoHtag card-container-bg flex-space-evenly">
         {ques && (
           <>
-            <div className="padding-small-card shade classA translateOne">
+            <div className="padding-small-card shade quiz-flex translateOne">
               <h4>{activeQuiz.name}</h4>
-              <div className="padding-small-card shade flex-column-al-center translateOne margin-normal-bottom back-btn">
-                <p>
-                  Question:
-                  <span className="highlight-text">{`${
-                    Number(quesNo) + 1
-                  }/${activeQuizQuestions.length}`}</span>
-                </p>
-                <p>
-                  Score:
-                  <span className="highlight-text">
-                    {score}
-                  </span>
-                </p>
-              </div>
-              {/* <h3 className="header-quiz-text">Stay Foolish Stay Hungry</h3 > */}
-              <div className="quiz-container padding-small-card shade">
-                <p className="padding-normal">
-                  {ques.question}
-                </p>
-              </div>
-              <div className="padding-normal card-selector-text">
-                <div className="option-container options-cont m-b-2">
-                  {ques.options.map((option, id) => (
-                    <Options
-                      option={option}
-                      key={id}
-                      id={id.toString()}
-                      answer=""
-                      isSelected={ques.isSelected}
-                      handleOptionChange={
-                        handleOptionChange
-                      }
-                      type="quiz"
-                    />
-                  ))}
+              <>
+                <div className="padding-small-card shade flex-column-al-center translateOne margin-normal-bottom back-btn col-12">
+                  <p>
+                    Question:
+                    <span className="highlight-text">{`${
+                      Number(quesNo) + 1
+                    }/${activeQuizQuestions.length}`}</span>
+                  </p>
+                  <p>
+                    Score:
+                    <span className="highlight-text">
+                      {score}
+                    </span>
+                  </p>
                 </div>
-              </div>
+                <div className="quiz-container padding-small-card shade">
+                  <p className="padding-normal">
+                    {ques.question}
+                  </p>
+                </div>
+                <div className="padding-normal card-selector-text col-12">
+                  <div className="option-container options-cont margin-bottom-2">
+                    {ques.options.map((option, id) => (
+                      <Options
+                        option={option}
+                        key={id}
+                        id={id.toString()}
+                        answer=""
+                        selection={ques.selection}
+                        handleOptionChange={
+                          handleOptionChange
+                        }
+                        type="quiz"
+                      />
+                    ))}
+                  </div>
+                </div>
 
-              <button
-                onClick={gotoNextQuestion}
-                className="padding-small-card shade flex-column-al-center translateOne margin-normal-top imgTransition back-btn"
-              >
-                {Number(quesNo) + 1 ===
-                activeQuizQuestions.length
-                  ? "Submit"
-                  : "Next Question"}
-              </button>
+                <button
+                  onClick={gotoNextQuestion}
+                  className="padding-small-card shade flex-column-al-center translateOne margin-normal-top imgTransition back-btn col-12"
+                >
+                  {Number(quesNo) + 1 ===
+                  activeQuizQuestions.length
+                    ? "Submit"
+                    : "Next Question"}
+                </button>
+              </>
             </div>
           </>
         )}

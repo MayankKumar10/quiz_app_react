@@ -3,8 +3,8 @@
   margin: 2rem auto;
   width: 500px;
   border-radius: 1rem;
-  color: var(--COLOR-DARK);
-  background-color: var(--COLOR-LIGHT);
+  color: var(--color-dark);
+  background-color: var(--color-light);
 }
 
 .card img {
@@ -32,7 +32,7 @@
   display: flex;
   font-size: 1.4rem;
   margin-right: 1rem;
-  color: var(--COLOR-HIGHLIGHT);
+  color: var(--color-primary);
 }
 
 .card .btn {

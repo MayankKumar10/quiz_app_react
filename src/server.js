@@ -1,4 +1,4 @@
-import { Model, RestSerializer, Server } from "miragejs";
+import {Model, RestSerializer, Server} from "miragejs";
 
 import {
   loginHandler,
@@ -6,14 +6,16 @@ import {
 } from "./backend/controllers/AuthController";
 
 //
-import { quizzes } from "backend/db/quiz";
+import {quizzes} from "backend/db/quiz";
 import {
   getAllQuizzesHandler,
   getQuizHandler,
 } from "backend/controllers/quizController";
-import { users } from "backend/db/users";
+import {users} from "backend/db/users";
 
-export function makeServer({ environment = "development" } = {}) {
+export function makeServer({
+  environment = "development",
+} = {}) {
   return new Server({
     serializers: {
       application: RestSerializer,
@@ -28,8 +30,12 @@ export function makeServer({ environment = "development" } = {}) {
     // Runs on the start of the server
     seeds(server) {
       server.logging = false;
-      quizzes.forEach((item) => server.create("quiz", { ...item }));
-      users.forEach((item) => server.create("user", { ...item, score: [] }));
+      quizzes.forEach((item) =>
+        server.create("quiz", {...item})
+      );
+      users.forEach((item) =>
+        server.create("user", {...item, score: []})
+      );
     },
 
     routes() {
@@ -38,9 +44,12 @@ export function makeServer({ environment = "development" } = {}) {
       this.post("/auth/signup", signupHandler.bind(this));
       this.post("/auth/login", loginHandler.bind(this));
 
-      // Quizzes routes (public)
+      // Quiz Questions routes (public)
       this.get("/quizzes", getAllQuizzesHandler.bind(this));
-      this.get("/quizzes/:quizId", getQuizHandler.bind(this));
+      this.get(
+        "/quizzes/:quesId",
+        getQuizHandler.bind(this)
+      );
     },
   });
 }

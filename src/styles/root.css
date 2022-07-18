@@ -4,6 +4,7 @@
 @import url("./rules.css");
 @import url("https://vision-ui-lib.netlify.app/styles/root.css");
 @import url("https://visionkart.netlify.app/styles/root.css");
+@import url("../components/QuizCard/quizCard.css");
 
 :root {
   --color-bg: #1a202c;

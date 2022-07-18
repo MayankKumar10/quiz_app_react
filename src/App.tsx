@@ -1,17 +1,10 @@
 import React from "react";
 import {Route, Routes} from "react-router-dom";
-import {
-  Home,
-  MockmanAPI,
-  Quiz,
-  Result,
-  Rules,
-} from "./pages";
+import {MockmanAPI, Quiz, Result, Rules} from "./pages";
 import {
   Footer,
   Header,
   HomePage,
-  SelectingCategories,
   StartingPage,
 } from "./components";
 import "./styles/root.css";
@@ -27,9 +20,9 @@ function App(): JSX.Element {
       <Routes>
         <Route path="/" element={<StartingPage />} />
         <Route path="/category" element={<HomePage />} />
-        <Route path="/rules/:quizId" element={<Rules />} />
+        <Route path="/rules/:quesId" element={<Rules />} />
         <Route
-          path="/quiz/:quizId/:quesNo"
+          path="/quiz/:quesId/:quesNo"
           element={<Quiz />}
         />
         <Route path="/result" element={<Result />} />

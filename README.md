@@ -1,19 +1,19 @@
 <div align="center">
 
-<img alt="Vision Quiz logo" src="src/assets/favicon/favicon-32x32.png" />
-<h1>Vision Quiz</h1>
+<img alt="Vision Logo" src="src/assets/favicon/favicon-32x32.png" />
+<h1>Gimesto Quiz</h1>
 <br>
 
-![Forks](https://img.shields.io/github/forks/vrx29/Vision-quiz-react)
-![Stars](https://img.shields.io/github/stars/vrx29/Vision-quiz-react)
+![Forks](https://img.shields.io/github/forks/vrx29/gimesto-quiz-react)
+![Stars](https://img.shields.io/github/stars/vrx29/gimesto-quiz-react)
 
 </div>
  
  ---
 
-A Quiz App in which user can browse multiple Quizzes. Each quiz has difficulty level as well as Easy, Medium and Hard. Quiz can be played and after submission of quiz User will be displayed with result and correct answers of the Questions which they have answered wrong.
+A Quiz App in which user can browse multiple Quizzes. Each quiz has levels level as well as Easy, Medium and Hard. Quiz can be played and after submission of quiz User will be displayed with result and correct answers of the Questions which they have answered wrong.
 
-Live Preview: [Vision-quiz.vercel.app](https://Vision-quiz.vercel.app/)
+Live Preview: [gimesto-quiz.vercel.app](https://gimesto-quiz.vercel.app/)
 
 ---
 
@@ -42,7 +42,7 @@ Live Preview: [Vision-quiz.vercel.app](https://Vision-quiz.vercel.app/)
 - **Axios** : v0.21.4
 - **Mirage js** : v0.1.41
 - **JWT** : v8.5.1
-- **Vision Component library** (developed by me)
+- **Gimesto Component library** (developed by me)
 
 ---
 
@@ -51,13 +51,13 @@ Live Preview: [Vision-quiz.vercel.app](https://Vision-quiz.vercel.app/)
 1. **Clone the repo:**
 
 ```bash
-  $ git clone https://github.com/vrx29/Vision-quiz-react.git
+  $ git clone https://github.com/vrx29/gimesto-quiz-react.git
 ```
 
 2. **Switch to `dev` branch:**
 
 ```bash
-  $ cd Vision-quiz-react
+  $ cd gimesto-quiz-react
   $ git checkout dev
 ```
 
@@ -99,19 +99,19 @@ Open the `localhost:3000` link in the browser.
 
 ## Home page screenshot with listed categories/quizzes
 
-![Vision Quiz](/src/assets/screenshots/screen1.png)
+![Gimesto Quiz](/src/assets/screenshots/screen1.png)
 
 ## Quiz Rules
 
-![Vision Quiz](/src/assets/screenshots/screen2.png)
+![Gimesto Quiz](/src/assets/screenshots/screen2.png)
 
 ## Quiz Page with question and options
 
-![Vision Quiz](/src/assets/screenshots/screen3.png)
+![Gimesto Quiz](/src/assets/screenshots/screen3.png)
 
 ## Result page with score
 
-![Vision Quiz](/src/assets/screenshots/screen4.png)
+![Gimesto Quiz](/src/assets/screenshots/screen4.png)
 
 > 👨‍💻 Connect with me
 > </br>

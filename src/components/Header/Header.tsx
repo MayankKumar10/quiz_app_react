@@ -27,35 +27,6 @@ export const Header = (): JSX.Element => {
             </button>
           </form>
 
-          <div className="iconsContainer flex-evenly">
-            <a className="headerAnchorTag flex-column-center icons-btn-hover buttonHoverShadow">
-              <i className="material-icons material-icons-text">
-                person
-              </i>
-              <span className="icon-inner-txt">
-                Account
-              </span>
-            </a>
-
-            <a className="headerAnchorTag flex-column-center icons-btn-hover buttonHoverShadow ">
-              <i className="material-icons material-icons-text">
-                favorite
-              </i>
-              <span className="icon-inner-txt">
-                Playlist
-              </span>
-            </a>
-
-            <a className="headerAnchorTag flex-column-center icons-btn-hover buttonHoverShadow">
-              <i className="material-icons material-icons-text">
-                theaters
-              </i>
-              <span className="icon-inner-txt">
-                Library
-              </span>
-            </a>
-          </div>
-
           <button
             id="myBtn"
             className="header-btn transparent-bg button-normal ButtonDomContainer icons-btn-hover buttonHoverShadow"

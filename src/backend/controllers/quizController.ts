@@ -1,4 +1,4 @@
-import { Response } from "miragejs";
+import {Response} from "miragejs";
 /**
  * All the routes related to Quizzes are present here.
  * These are Publicly accessible routes.
@@ -11,7 +11,11 @@ import { Response } from "miragejs";
 
 export const getAllQuizzesHandler = function () {
   try {
-    return new Response(200, {}, { quizzes: this.db.quizzes });
+    return new Response(
+      200,
+      {},
+      {quizzes: this.db.quizzes}
+    );
   } catch (error) {
     return new Response(
       500,
@@ -25,13 +29,15 @@ export const getAllQuizzesHandler = function () {
 
 /**
  * This handler gets all quiz data in the db.
- * send GET Request at /api/quizzes/:quizId
+ * send GET Request at /api/quizzes/quesId
  * */
 export const getQuizHandler = function (schema, request) {
-  const { quizId } = request.params;
+  const {quesId} = request.params;
   try {
-    const quiz = schema.quizzes.findBy({ _id: quizId }).attrs;
-    return new Response(200, {}, { quiz });
+    const quiz = schema.quizzes.findBy({
+      _id: quesId,
+    }).attrs;
+    return new Response(200, {}, {quiz});
   } catch (error) {
     return new Response(
       500,

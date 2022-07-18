@@ -1,15 +1,14 @@
 :root {
   --MAX_WIDTH: 1366px;
-  --COLOR-HIGHLIGHT: #11bdb8;
-  --COLOR-OPTION: #f8f7ff;
-  --COLOR-OPTION-HOVER: #e2eafc;
+  --color-options: #272e3b;
+  --color-options-HOVER: #e2eafc;
   --color-bg: #1a202c;
   --color-card-bg: #19212c;
   --color-text: #f7f7f7;
   --color-text-1: #d6d6d6;
-  --COLOR-SUCCESS: #48bb78a8;
-  --COLOR-ERROR: #f56565a8;
-  --COLOR-PRIMARY: #007fff;
+  --Color-RightAns: #48bb78a8;
+  --Color-WrongAns: #f56565a8;
+  --color-primary: #007fff;
 }
 
 .dark {

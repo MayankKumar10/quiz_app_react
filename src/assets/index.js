@@ -7,3 +7,4 @@ export {default as Trophy1} from "./trophy1.jpg";
 export {default as ResultTrophy} from "./ResultTrophy.jpg";
 export {default as TV_Shows} from "./TV_Shows.jpg";
 export {default as error404} from "./page_not_found_404.svg";
+export {default as Oops} from "./Oops.jpeg";

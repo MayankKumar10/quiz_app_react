@@ -1,0 +1,38 @@
+:root {
+  --MAX_WIDTH: 1366px;
+  --COLOR-HIGHLIGHT: #11bdb8;
+  --COLOR-OPTION: #f8f7ff;
+  --COLOR-OPTION-HOVER: #e2eafc;
+  --color-bg: #1a202c;
+  --color-card-bg: #19212c;
+  --color-text: #f7f7f7;
+  --color-text-1: #d6d6d6;
+  --COLOR-SUCCESS: #48bb78a8;
+  --COLOR-ERROR: #f56565a8;
+  --COLOR-PRIMARY: #007fff;
+}
+
+.dark {
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.light {
+  color: var(--color-bg);
+  background-color: var(--color-text-1);
+}
+
+main {
+  min-height: 100vh;
+}
+
+section {
+  margin: auto;
+  max-width: var(--MAX_WIDTH);
+  min-height: calc(100vh - 68px - 7rem);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

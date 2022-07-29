@@ -10,8 +10,10 @@ export type quizDataProps = {
   _id: string;
   name: string;
   levels: string;
+  category:string;
   categories: string[];
   quotes: string;
   quizImg: string;
+  categoryImg: string;
   questions: questionProps[];
 };

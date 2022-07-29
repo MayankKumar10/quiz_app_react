@@ -5,20 +5,27 @@ import reportWebVitals from "./reportWebVitals";
 import {makeServer} from "./server";
 import {BrowserRouter as Router} from "react-router-dom";
 import {QuizProvider, ThemeProvider} from "./context";
+import { AuthProvider } from "./context/AuthProvider";
 
 makeServer();
 
-const container = document.getElementById("root");
+type containerProps ={
+  container: HTMLElement | null
+}
+
+const container   = document.getElementById("root");
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
     <Router>
+      {/* <AuthProvider> */}
       <ThemeProvider>
         <QuizProvider>
           <App />
         </QuizProvider>
       </ThemeProvider>
+      {/* </AuthProvider> */}
     </Router>
   </React.StrictMode>
 );

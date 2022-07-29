@@ -11,22 +11,7 @@ export const Header = (): JSX.Element => {
         </div>
 
         <div className="headerContainerTwo flex padding-top-normal1">
-          <form
-            className="search-container-main"
-            action="#"
-          >
-            <input
-              className="boxShadow search-container"
-              type="search"
-              name=""
-              placeholder="search"
-              id=""
-            />
-            <button className="material-icons button-transparent primary-btn">
-              search
-            </button>
-          </form>
-
+          
           <button
             id="myBtn"
             className="header-btn transparent-bg button-normal ButtonDomContainer icons-btn-hover buttonHoverShadow"

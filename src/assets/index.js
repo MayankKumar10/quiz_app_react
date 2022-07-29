@@ -8,3 +8,10 @@ export {default as ResultTrophy} from "./ResultTrophy.jpg";
 export {default as TV_Shows} from "./TV_Shows.jpg";
 export {default as error404} from "./page_not_found_404.svg";
 export {default as Oops} from "./Oops.jpeg";
+export {default as steve} from "./steve.jpg";
+
+export {default as twitter} from "./twitter.png";
+export {default as github} from "./-github.svg";
+export {default as facebook} from "./facebook.png";
+export {default as github2} from "./github.svg";
+export {default as google} from "./google.svg";

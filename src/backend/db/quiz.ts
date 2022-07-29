@@ -1,5 +1,5 @@
 import {v4 as uuid} from "uuid";
-import {SteveJobsQuiz, SuitsQuiz} from "assets";
+import {SteveJobsQuiz, SuitsQuiz, Movies, TV_Shows,} from "assets";
 
 export const quizzes = [
   {
@@ -7,6 +7,8 @@ export const quizzes = [
     name: "Suits",
     levels: "Medium",
     quotes: "I don't play the odds, I play the man",
+    category:['SERIES'],
+    categoryImg: TV_Shows,
     categories: ["Drama"],
     quizImg: SuitsQuiz,
     questions: [
@@ -65,6 +67,8 @@ export const quizzes = [
     name: "Steve Jobs",
     levels: "medium",
     quotes: "Stay Foolish Stay Hungry",
+    category:['MOVIES'],
+    categoryImg: Movies,
     categories: ["biography"],
     quizImg: SteveJobsQuiz,
     questions: [

@@ -10,7 +10,7 @@ export const Header = (): JSX.Element => {
           </h4>
         </div>
 
-        <div className="headerContainerTwo flex padding-top-normal1">
+        {/* <div className="headerContainerTwo flex padding-top-normal1">
           
           <button
             id="myBtn"
@@ -22,7 +22,7 @@ export const Header = (): JSX.Element => {
               </span>
             </a>
           </button>
-        </div>
+        </div> */}
       </header>
     </div>
   );

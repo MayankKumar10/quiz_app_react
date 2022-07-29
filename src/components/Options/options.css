@@ -1,0 +1,35 @@
+label {
+  text-align: center;
+  text-transform: capitalize;
+  background-color: var(--color-options);
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+label:hover {
+  background-color: var(--color-primary);
+  transform: translate(0.2rem);
+  transition: transform ease-in-out 0.5s;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.correct {
+  background-color: var(--Color-RightAns);
+  color: var(--color-light);
+}
+
+.wrong {
+  background-color: var(--Color-WrongAns);
+  color: var(--color-light);
+}

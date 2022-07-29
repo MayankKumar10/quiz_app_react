@@ -1,0 +1,26 @@
+.options[value="true"] {
+  background-color: var(--Color-RightAns);
+  color: var(--color-text-1);
+}
+
+.option-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.options {
+  background-color: var(--Color-WrongAns);
+  color: var(--color-text-1);
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}

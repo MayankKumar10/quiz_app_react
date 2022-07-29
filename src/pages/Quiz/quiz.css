@@ -1,0 +1,27 @@
+.margin-bottom-2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.card .info {
+  display: flex;
+  justify-content: space-between;
+  color: var(--COLOR-GRAY-300);
+}
+
+.highlight-text {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.quiz-flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card .question {
+  font-size: 1.2rem;
+  font-weight: 700;
+}

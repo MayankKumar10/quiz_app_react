@@ -1,0 +1,37 @@
+:root {
+  --MAX_WIDTH: 1366px;
+  --color-options: #272e3b;
+  --color-options-HOVER: #e2eafc;
+  --color-bg: #1a202c;
+  --color-card-bg: #19212c;
+  --color-text: #f7f7f7;
+  --color-text-1: #d6d6d6;
+  --Color-RightAns: #48bb78a8;
+  --Color-WrongAns: #f56565a8;
+  --color-primary: #007fff;
+}
+
+.dark {
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.light {
+  color: var(--color-bg);
+  background-color: var(--color-text-1);
+}
+
+main {
+  min-height: 100vh;
+}
+
+section {
+  margin: auto;
+  max-width: var(--MAX_WIDTH);
+  min-height: calc(100vh - 68px - 7rem);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

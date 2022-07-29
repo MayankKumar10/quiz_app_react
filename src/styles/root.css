@@ -1,0 +1,35 @@
+@import url("./homePage.css");
+@import url("./StartingPage.css");
+@import url("./quizOne.css");
+@import url("./rules.css");
+@import url("https://vision-ui-lib.netlify.app/styles/root.css");
+@import url("https://visionkart.netlify.app/styles/root.css");
+@import url("../components/QuizCard/quizCard.css");
+
+:root {
+  --color-bg: #1a202c;
+  --color-card-bg: #19212c;
+  --color-text: #f7f7f7;
+  --color-text-1: #d6d6d6;
+  --color-card-shadow: rgba(245, 245, 237, 0.25) 0px 50px
+      100px -20px,
+    rgba(243, 238, 238, 0.3) 0px 30px 60px -30px,
+    rgba(226, 229, 231, 0.35) 0px -2px 6px 0px inset;
+}
+
+.iframe-quiz-container {
+  height: 45rem;
+  background-color: #1a202c;
+}
+
+.back-btn {
+  cursor: pointer;
+}
+
+.headerContainerMain {
+  position: relative;
+}
+
+.margin-normal-bottom {
+  margin-bottom: 1rem;
+}
